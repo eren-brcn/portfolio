@@ -1,0 +1,118 @@
+:root {
+  --bg: #0f111a;
+  --bg-soft: #151826;
+  --text: #f3f4fa;
+  --muted: #a5acc7;
+  --card: #181c2d;
+  --line: #313754;
+  --accent: #854ce6;
+  --accent-soft: #2b2346;
+  --hot: #a970ff;
+  --max-width: 1120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(133, 76, 230, 0.28), transparent 34%),
+    radial-gradient(circle at 85% 22%, rgba(43, 35, 70, 0.34), transparent 30%),
+    linear-gradient(180deg, #0f111a 0%, #121625 64%, #101320 100%);
+  color: var(--text);
+  font-family: var(--font-sora), sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.page-shell {
+  min-height: 100vh;
+}
+
+.section {
+  width: min(var(--max-width), calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 4.8rem 0;
+}
+
+.section-title {
+  font-family: var(--font-space-grotesk), sans-serif;
+  letter-spacing: -0.03em;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  margin: 0;
+}
+
+.section-subtitle {
+  margin-top: 0.6rem;
+  color: var(--muted);
+  max-width: 660px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1rem;
+  box-shadow: 0 16px 34px rgba(6, 7, 12, 0.45);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  background: #1a1f33;
+  text-decoration: none;
+}
+
+.btn {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-sora), sans-serif;
+}
+
+.btn:hover {
+  filter: brightness(0.95);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.section-title,
+h3,
+strong {
+  color: var(--text);
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding: 3.6rem 0;
+  }
+}

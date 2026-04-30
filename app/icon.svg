@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <text x="32" y="45" font-family="monospace" font-weight="700" font-size="36" fill="white" text-anchor="middle">E</text>
+  <polyline points="8,20 2,32 8,44" stroke="#a78bfa" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="56,20 62,32 56,44" stroke="#f97316" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+</svg>
