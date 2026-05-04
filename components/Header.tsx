@@ -9,6 +9,8 @@ const links = [
 ];
 
 export default function Header() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <header className="section" style={{ paddingTop: "1.25rem", paddingBottom: "1.25rem", position: "sticky", top: 0, zIndex: 20 }}>
       <div
@@ -49,9 +51,20 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <a href="https://github.com/eren-brcn" target="_blank" rel="noreferrer" className="btn secondary" style={{ textDecoration: "none" }}>
-          Github Profile
-        </a>
+        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+          <a
+            href={`${basePath}/resume.pdf`}
+            target="_blank"
+            rel="noreferrer"
+            className="btn"
+            style={{ textDecoration: "none" }}
+          >
+            Resume
+          </a>
+          <a href="https://github.com/eren-brcn" target="_blank" rel="noreferrer" className="btn secondary" style={{ textDecoration: "none" }}>
+            Github Profile
+          </a>
+        </div>
       </div>
     </header>
   );
