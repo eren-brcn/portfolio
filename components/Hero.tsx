@@ -1,6 +1,8 @@
 import Image from "next/image";
 
 export default function Hero() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <section className="section" id="about" style={{ paddingTop: "1rem" }}>
       <div
@@ -51,7 +53,7 @@ export default function Hero() {
         >
           <div style={{ position: "relative", width: "100%", height: "100%", minHeight: "280px" }}>
             <Image
-              src="/eren15.jpeg"
+              src={`${basePath}/eren15.jpeg`}
               alt="Eren profile photo"
               fill
               style={{ objectFit: "cover", objectPosition: "center 30%" }}

@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useMemo, useState } from "react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 type Project = {
   title: string;
   category: "web" | "mobile";
@@ -18,7 +20,7 @@ const data: Project[] = [
     category: "web",
     summary: "Production-ready MERN Stack dashboard matching users with live music events. Integrated AI workflows for debugging and component generation, reducing development time by 30%. Deployed on Vercel with responsive UI and real-time data integration.",
     stack: ["React", "Node.js", "MongoDB", "Express", "AI-Assisted Dev"],
-    image: "/vibbe2.png",
+    image: `${basePath}/vibbe2.png`,
     demoUrl: "https://vibecheck-sigma-virid.vercel.app/login",
   },
   {
@@ -26,14 +28,14 @@ const data: Project[] = [
     category: "web",
     summary: "A health-focused full stack web app built for cardio tracking, daily routines, and progress visualization.",
     stack: ["React", "Node.js", "Express", "MongoDB", "TypeScript"],
-    image: "/cardioweb.png",
+    image: `${basePath}/cardioweb.png`,
   },
   {
     title: "Endless Ball",
     category: "mobile",
     summary: "An endless arcade-style game project focused on smooth controls, score progression, and responsive gameplay.",
     stack: ["JavaScript", "React Native", "Game Loop", "Firebase"],
-    image: "/endless-ball.png",
+    image: `${basePath}/endless-ball.png`,
   },
   {
     title: "WeatherNow",
